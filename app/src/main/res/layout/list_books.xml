@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_height="150dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/book_IMG"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            app:shapeAppearanceOverlay="@style/roundEdge"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.8"
+            >
+            <TextView
+                android:id="@+id/book_TXT_title"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:gravity="left"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:id="@+id/book_TXT_body"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="left"/>
+
+            <RatingBar
+                android:id="@+id/rating_stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.1"
+                style="?android:attr/ratingBarStyle"
+                android:theme="@style/RatingBar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
